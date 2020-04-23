@@ -1,13 +1,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: booking-service
+  name: fs-email-service
 spec:
   selector:
     app: fs-email-service-lable
   ports:
   - protocol: TCP
-    port: 8093
+    port: 8082
     targetPort: 80
   type: LoadBalancer
 ---
