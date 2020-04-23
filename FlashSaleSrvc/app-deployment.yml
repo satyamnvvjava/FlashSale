@@ -7,7 +7,7 @@ spec:
     app: flashsale-service-lable
   ports:
   - protocol: TCP
-    port: 8093
+    port: 8083
     targetPort: 80
   type: LoadBalancer
 ---
