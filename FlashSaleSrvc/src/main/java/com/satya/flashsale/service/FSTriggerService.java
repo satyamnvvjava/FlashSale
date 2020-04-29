@@ -1,6 +1,7 @@
 package com.satya.flashsale.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,6 +19,8 @@ public class FSTriggerService {
 	private FSDetailsRepository fsDetailsRepository;
 	@Autowired
 	private RestTemplate restTemplate;
+	@Autowired 
+	private Environment env;
 	public boolean trigger(FlashSaleTriggerBean flashSaleTriggerBean) {
 
 		ItemDetails itemDetails = itemRepository.findByItemId(flashSaleTriggerBean.getItemId());
@@ -26,6 +29,7 @@ public class FSTriggerService {
 		flashSaleDetails = fsDetailsRepository.save(flashSaleDetails);
 		// make rest call using rest template
 		//restTemplate.post
+		String emailSrvcEndPoint = env.getProperty("emailsrvcendpoint");
 		return true;
 	}
 }
