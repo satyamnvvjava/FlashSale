@@ -1,6 +1,7 @@
 package com.satya.fsemailsrvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,9 +18,8 @@ public class EmailController {
   private UserService userService;
   
   @PostMapping("/sendFSEmails")
-  public String sendFSEmails(@RequestBody FlashSaleBean flashSaleBean) {
+  public ResponseEntity<?> sendFSEmails(@RequestBody FlashSaleBean flashSaleBean) {
 	  emailService.sendEmails(userService.getAllUserEmails(),flashSaleBean);
-	  
-	  return "emails sent successfully";
+	  return ResponseEntity.ok("emails sent successfully");
   }
 }

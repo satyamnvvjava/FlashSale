@@ -11,6 +11,8 @@ public class FSRegUserService {
 	@Autowired
 	private FSRegUserRepository fsRegUserRepository;
 	public boolean registerUser(RegUserDetails userDetails) {
+		//get flash sale details
+		
 		FlashSaleRegUser flashSaleRegUser = new FlashSaleRegUser(userDetails);
 		flashSaleRegUser = fsRegUserRepository.save(flashSaleRegUser);
 		return true;
