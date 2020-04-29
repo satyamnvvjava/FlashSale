@@ -1,4 +1,4 @@
-package com.satya.flashsale.model;
+package com.satya.flashsale.bean;
 
 import java.util.Date;
 

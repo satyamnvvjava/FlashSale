@@ -1,4 +1,4 @@
-package com.satya.flashsale.model;
+package com.satya.flashsale.bean;
 
 import java.util.Date;
 
@@ -23,8 +23,24 @@ public class FlashSaleBean {
     private int fsOfferPrice;
     private String itemName;
     private int itemActualPrice;
+    public FlashSaleBean() {
+    	
+    }
     
-    
+
+	public FlashSaleBean(int fsId, String fsName, Date fsDateStarts, Date fsDateEnds, int fsItemCount, int fsOfferPrice,
+			String itemName, int itemActualPrice) {
+		super();
+		this.fsId = fsId;
+		this.fsName = fsName;
+		this.fsDateStarts = fsDateStarts;
+		this.fsDateEnds = fsDateEnds;
+		this.fsItemCount = fsItemCount;
+		this.fsOfferPrice = fsOfferPrice;
+		this.itemName = itemName;
+		this.itemActualPrice = itemActualPrice;
+	}
+
 
 	public int getItemActualPrice() {
 		return itemActualPrice;

@@ -12,7 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.satya.flashsale.model.FlashSaleTriggerBean;
+import com.satya.flashsale.bean.FlashSaleTriggerBean;
 
 @Entity
 @Table(name = "flash_sale_details")
