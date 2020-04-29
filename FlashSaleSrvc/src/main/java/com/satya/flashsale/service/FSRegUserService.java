@@ -18,3 +18,10 @@ public class FSRegUserService {
 		return true;
 	}
 }
+/*
+ * Users are required to register for this flash sale 
+ * even before hand to purchase the products or browse through the flash sale page.
+ * 
+ * Example:n flash sale user registratin service will do
+ * user registration before 29th april 2020 if they are trying to register on or after 29th april 2020 stop them.
+*/

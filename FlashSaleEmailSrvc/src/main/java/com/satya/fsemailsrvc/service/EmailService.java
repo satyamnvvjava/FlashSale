@@ -9,6 +9,12 @@ import org.springframework.stereotype.Service;
 
 import com.satya.fsemailsrvc.bean.FlashSaleBean;
 
+/*
+ * EmailService will connect to company user base(user_details data base)
+ * and sends an email.
+ * The email should contain:
+ * 1. flash sale details and, REST URL for registration, REST URL for flash sale purchase
+ */
 @Service
 public class EmailService {
 
@@ -16,6 +22,8 @@ public class EmailService {
 	private JavaMailSender javaMailSender;
 
 	public void sendEmails(List<String> emailsList,FlashSaleBean flashSaleBean) {
+		
+		
 		String sendersList[] = new String[emailsList.size()];
 		
 		SimpleMailMessage msg = new SimpleMailMessage();
